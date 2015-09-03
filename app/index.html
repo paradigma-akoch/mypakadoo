@@ -19,44 +19,23 @@
   <script src="js/controllers/MyPakadooController.js"></script>
   <script src="js/controllers/PaketeController.js"></script>
   <script src="js/controllers/ServicesController.js"></script>
+  <script src="js/directives/header.js"></script>
+  <script src="js/directives/footer.js"></script>
   <!-- <script src="js/directives/directives.js"></script>
   <script src="js/filters/filters.js"></script>
   <script src="js/services/services.js"></script> -->
 </head>
 <body>
 
-  <div class="container">
+  <div class="body-bg">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarController">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#/services">myPakadoo</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li ng-class="{active: routeIs('/services')}"><a href="#/services">SERVICES</a></li>
-            <li ng-class="{active: routeIs('/pakete')}"><a href="#/pakete">PAKETE</a></li>
-            <li ng-class="{active: routeIs('/account')}"><a href="#/account">ACCOUNT</a></li>
-            <li ng-class="{active: routeIs('/faq')}"><a href="#/faq">FAQ</a></li>
-          </ul>
+    <header></header> 
 
-          <ul class="nav pull-right">
-            <li ng-class="{active: routeIs('/mypakadoo')}"><a href="#/mypakadoo">MY PAKADOO</a></li>
-          </ul>          
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>    
-
-
-    <div class="view-container">
-      <div ng-view class="view-frame"></div>
+    <div id="content" class="main-section view-container">
+      <div ng-view class="container-fluid view-frame"></div>
     </div>
+
+    <footer></footer>
 
   </div>  
 

@@ -1,5 +1,171 @@
 /* app css stylesheet */
 
+/*** COLORS ***/
+/*.white      { color: white; }
+.yellow     { color: rgb(255,221,0); }
+.darkgreen  { color: rgb(15,84,98); }
+.cyan       { color: rgb(80,184,204); }
+.darkcyan   { color: rgb(15,83,98); }
+.darkgrey   { color: rgb(75,75,75); }
+.mediumgrey { color: rgb(220,220,220); }
+.lightgrey  { color: rgb(240,240,240); }*/
+
+html,
+body {
+    font: italic normal 400 24px/117% 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    background-color: white;
+    color: black;
+}
+
 .view-container {
-	margin-top: 80px;
+	margin: 250px 0;
+	text-align: center;
+}
+
+
+
+
+/*** MENU ITEMS ***/
+.menuitem {
+    font: italic normal 500 15px/25px 'Roboto', sans-serif;
+    background: rgb(80,184,204);
+    color: white;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 0 7px;
+    min-width:150px;
+}
+
+.menuitem:before {
+    left: -15px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 0 solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 25px solid rgb(80,184,204);
+    content: '';
+}
+
+.menuitem:after {
+    position: absolute;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid rgb(80,184,204);
+    content: '';
+}
+
+.active .menuitem,
+.menuitem:hover {
+    background: rgb(15,83,98);
+    cursor: pointer;
+}
+
+.active .menuitem:after,
+.menuitem:hover:after {
+    border-top-color: rgb(15,83,98);
+    cursor: pointer;
+}
+
+.active .menuitem:before,
+.menuitem:hover:before {
+    border-bottom-color: rgb(15,83,98);
+    cursor: pointer;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background-color: transparent
+}
+
+/*** FOOTER ***/
+.footer-content {
+    text-align: center;
+}
+.footer-content ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+.footer-content li {
+    display: inline-block;
+}
+.footer-content li a {
+    color: white;
+    text-transform: uppercase;
+}
+.footer-content li a:hover,
+.footer-content li a:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-follow {
+	/*font-size: 40px;*/
+	color: rgb(80,184,204);	
+	text-transform: uppercase;
+}
+.footer-follow em {
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+
+.footer-menu {
+    color: black;
+	font-weight: bold;
+    background-color: rgb(80,184,204);
+    padding: 20px 0;
+    vertical-align: middle;
+}
+.footer-menu-text-big {
+	color: white;
+	display: block;
+}
+.footer-menu-text {
+    position: relative;
+    top: 2px;
+}
+
+.footer-strapline {
+    color: black;
+    background-color: rgb(255,221,0);
+    border-top: 6px solid white;
+    border-bottom: 6px solid white;
+}
+.footer-strapline p,
+.footer-strapline a,
+.footer-strapline a:hover,
+.footer-strapline a:focus {
+    color: black;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+.footer-disclaimer {
+    font-size: 14px;
+    color: white;
+    background-color: rgb(75,75,75);
+    padding: 45px 0;
+}
+.footer-disclaimer p {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.footer-disclaimer-menu {
+    padding-left: 0;
+}
+
+.menu-separator {
+    content:'/';
+    padding: 0 20px;
+}
+
+.slash{
+	padding:0 20px
 }
